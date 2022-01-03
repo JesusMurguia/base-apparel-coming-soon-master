@@ -53,8 +53,8 @@ body{
     text-transform: uppercase;
     font-size: 2.3rem;
     font-weight: 700;
-    margin-bottom: 1rem;
-    letter-spacing: 1rem;
+    margin-bottom: 2rem;
+    letter-spacing: 1.5rem;
     color: var(--dark-grayish-red)
 }
 
@@ -127,7 +127,7 @@ body{
         grid-template-areas:
             "logo hero"
             "main hero";
-        grid-template-columns: 55% 45%;
+        grid-template-columns: 60% 40%;
         grid-template-rows: min-content 1fr;
         background-image: url("../images/bg-pattern-desktop.svg");
         background-color: hsla(0, 80%, 86%, 0.123);
@@ -140,10 +140,11 @@ body{
     }
 
     h1, span{
-        font-size: 6vw!important;
+        font-size: 5vw!important;
         padding-right: 5rem;
     }
     #main{
+        padding-top: 8rem;
         padding-left: 8rem;
         padding-right: 8rem;
     }
@@ -153,11 +154,12 @@ body{
     }
 
     #logo{
-        padding-left: 8rem;;
+        padding-left: 8rem;
+        padding-top: 4rem;
     }
 
     .logo{
-        height: 4vw;
+        height: 3rem;
     }
 
     .hero{
