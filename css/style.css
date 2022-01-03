@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap');
+*{
+    --desaturated-red: hsl(0, 36%, 70%);
+    --soft-red: hsl(0, 93%, 68%);
+    --dark-grayish-red: hsl(0, 6%, 24%);
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--dark-grayish-red)
+}
+
+body{
+    display: grid;
+    grid-template-areas:
+        "logo"
+        "hero"
+        "main";
+    grid-template-columns: 1fr;
+    grid-template-rows: 6rem min-content auto;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: linear-gradient(135deg,  hsl(0, 0%, 100%), hsl(0, 100%, 98%)),linear-gradient(135deg,  hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+.hero{
+    background: url("../images/hero-mobile.jpg") no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 259px;
+}
+
+#logo{
+    grid-area: logo;
+    padding:2rem;
+    
+}
+
+.logo{
+    height: 30px;
+}
+
+#hero{
+    grid-area: hero;
+}
+
+#main{
+    grid-area: main;
+    padding: 2rem;
+    text-align: center;                
+}
+
+#main > h1{
+    margin:2rem 0 0 0;
+    text-transform: uppercase;
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 1rem;
+    color: var(--dark-grayish-red)
+}
+
+#main > h1 > span{
+    font-size: 2.3rem;
+    color: var(--desaturated-red);
+    font-weight: 300;
+}
+
+#main > p{
+    font-size: 0.9rem;
+    color: var(--desaturated-red);
+    margin-bottom:3rem;
+}
+
+#email{
+    border-radius: 2rem;
+    border: 1px solid var(--desaturated-red);
+    padding: 0.5rem;
+    background: transparent;
+    width: 90%;
+    height: 3rem;
+}
+
+#email:active{
+    border: 1px solid var(--desaturated-red);
+}
+
+#email::placeholder{
+    color: var(--desaturated-red);
+    font-size: 0.9rem;
+}
+
+
+#button {
+    margin-left: -3rem;
+    width: 4rem;
+    height: 3rem;
+    background: linear-gradient(hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border:0;
+    border-radius: 6rem;
+}
+
+#button:hover{
+    transform: scale(1.1);
+    transition: all 0.1s ease-in-out;
+    background: linear-gradient(135deg,   hsl(0, 100%, 98%),hsl(0, 80%, 86%));
+}
+
+.invalid-email{
+    color: var(--soft-red)!important;
+    font-size: 0.9vw;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+.hidden{
+    display: none;
+}
+
+.invalid-email-border{
+    border: 2px solid var(--soft-red)!important;
+    background: url("../images/icon-error.svg") no-repeat right!important;
+    background-size: 1.5em!important;
+    background-position-x: 70% !important;
+}
+
+@media screen and (min-width: 1000px){
+    body{
+        grid-template-areas:
+            "logo hero"
+            "main hero";
+        grid-template-columns: 55% 45%;
+        grid-template-rows: min-content 1fr;
+        background-image: url("../images/bg-pattern-desktop.svg");
+        background-color: hsla(0, 80%, 86%, 0.123);
+        background-size: 55% 100%;
+    }
+
+
+    h1, p{
+        text-align: left;
+    }
+
+    h1, span{
+        font-size: 6vw!important;
+        padding-right: 5rem;
+    }
+    #main{
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+
+    p{
+        font-size: 1.5vw!important;
+    }
+
+    #logo{
+        padding-left: 8rem;;
+    }
+
+    .logo{
+        height: 4vw;
+    }
+
+    .hero{
+        max-height: none;
+        height: 100%;
+        background: url("../images/hero-desktop.jpg") no-repeat;
+        background-size: cover;
+    }
+
+    #email{
+        width: 97%;
+        height: 4rem;
+        font-size: 1.5vw;
+        padding-left: 2vw;
+        vertical-align: middle;
+    }
+
+    
+    
+    #button {
+        margin-left: -7rem;
+        width: 7rem;
+        height: 4rem;
+    }
+
+    #email::placeholder{
+        font-size: 1.5vw;
+    }
+}
